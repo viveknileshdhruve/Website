@@ -1,0 +1,82 @@
+<script>
+$(document).ready(function(){
+$(this).scrollTop(0);
+});
+</script>
+<div class="banner faq">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="banner-caption">
+            <h1>FAQ's</h1>
+            <p>Have doubt? Get answers to your queries. If any other queries</p>
+        </div>
+    </div>
+</div>
+<div class="faq-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="block-title">Borrower</h1>
+            </div>
+            <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default" ng-repeat="v in faq.borrower">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href=".collapse{{$index}}">
+                                    {{v.que}}</a>
+                                <a data-toggle="collapse" class="pull-right hidden-xs hidden-sm" data-parent="#accordion" href=".collapse{{$index}}">
+                                    <i class="fa fa-plus"></i></a>
+                            </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse collapse{{$index}}">
+                            <div class="panel-body">{{v.ans}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mrgn-top-35">
+            <div class="col-md-12">
+                <h1 class="block-title">Lenders</h1>
+            </div>
+            <div class="col-md-12">
+                <div class="panel-group" id="accordion1">
+                    <div class="panel panel-default" ng-repeat="l in faq.lender">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion1" href=".lender{{$index}}">
+                                    {{l.que}}</a>
+                                <a data-toggle="collapse" class="pull-right hidden-xs hidden-sm" data-parent="#accordion1" href=".lender{{$index}}"><i class="fa fa-plus"></i></a>
+                            </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse lender{{$index}}">
+                            <div class="panel-body">{{l.ans}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mrgn-top-35">
+            <div class="col-md-12">
+                <h1 class="block-title">Channel Partners</h1>
+            </div>
+            <div class="col-md-12">
+                <div class="panel-group" id="accordion2">
+                    <div class="panel panel-default" ng-repeat="c in faq.channelpartners"> 
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion2" href=".channel{{$index}}">
+                                    {{c.que}}</a>
+                                <a data-toggle="collapse" class="pull-right hidden-xs hidden-sm" data-parent="#accordion2" href=".channel{{$index}}"><i class="fa fa-plus"></i></a>
+                            </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse channel{{$index}}">
+                            <div class="panel-body">{{c.ans}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
